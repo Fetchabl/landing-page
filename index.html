@@ -17,7 +17,8 @@
     }
     header img {
       width: 120px;
-      margin-bottom: 20px;
+      margin: 0 auto 20px;
+      display: block;
     }
     header h1 {
       font-size: 2em;
@@ -30,6 +31,18 @@
     }
     .signup-form {
       text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+      max-width: 90%;
+      margin: 0 auto;
+    }
+    @media (min-width: 600px) {
+      .signup-form {
+        flex-direction: row;
+        justify-content: center;
+      }
     }
     input[type="email"] {
       padding: 12px;
@@ -47,8 +60,16 @@
       border: none;
       border-radius: 6px;
       cursor: pointer;
+      width: 100%;
+      max-width: 180px;
+      transition: background-color 0.3s ease, transform 0.2s ease;
     }
-    section {
+
+    button:hover {
+      background-color: #b94c3c;
+      transform: translateY(-2px);
+    }
+        section {
       padding: 40px 20px;
       max-width: 700px;
       margin: 0 auto;
@@ -69,13 +90,13 @@
 
 <body>
   <header>
-    <img src="your-logo.png" alt="Lupoppy Logo" />
-    <h1>Find Your Furry Friend</h1>
+    <img src="lupoppy-logo.png" alt="Lupoppy Logo" />
+    <h1>Find Your Forever Friend</h1>
     <p>A warm, modern platform for discovering adoptable dogs from trusted UK rescues — all in one place.</p>
-    <div class="signup-form">
-      <input type="email" placeholder="Enter your email" />
-      <button>Join the Waitlist</button>
-    </div>
+    <form class = "signup-form" name="waitlist" method="POST" data-netlify="true" action="/thank-you.html">
+      <input type="email" name="email" placeholder="Enter your email" required />
+      <button type="submit">Join the Waitlist 🐾</button>
+    </form>
   </header>
 
   <section>
