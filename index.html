@@ -80,9 +80,12 @@
       color: #D6654F;
       margin-bottom: 20px;
     }
+    .card-section {
+      padding: 0 20px;
+    }
     .rescue-section {
-      background-color: #EDE7E3;
-      padding: 20px 20px;
+      background-color: rgb(237, 231, 227);
+      padding: 20px;
       margin: 20px auto;
       text-align: center;
       border-radius: 20px;
@@ -97,7 +100,7 @@
     }
     .waitlist-section {
       background-color: #293640;
-      padding: 20px 20px;
+      padding: 20px;
       margin: 20px auto;
       text-align: center;
       border-radius: 20px;
@@ -111,6 +114,33 @@
       max-width: 400px;
       margin: 0 auto;
     }
+    .how-section {
+      background-color: #fff;
+      border-radius: 20px;
+      padding: 40px 20px;
+      margin: 20px auto;
+      text-align: center;
+    }
+    .how-steps {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      margin-top: 30px;
+    }
+    .how-step {
+      max-width: 200px;
+      margin: 0 auto;
+    }
+    .how-icon {
+      font-size: 2em;
+      margin-bottom: 10px;
+    }
+    @media (min-width: 700px) {
+      .how-steps {
+        flex-direction: row;
+        justify-content: space-around;
+      }
+    }
     footer {
       text-align: center;
       font-size: 0.9em;
@@ -119,7 +149,6 @@
     }
   </style>
 </head>
-
 <body>
   <header>
     <img src="lupoppy-logo.png" alt="Lupoppy Logo" />
@@ -127,34 +156,86 @@
     <p>A warm, modern platform for discovering adoptable dogs from trusted UK rescues - all in one place.</p>
   </header>
 
-  <section class="rescue-section">
-    <h2 style="color: #3D2F2F; margin-bottom: 20px;">Are you a rescue organisation?</h2>
-    <p style="max-width: 600px; margin: 0 auto 20px; font-size: 1.1em;">
-      We're building a smarter way for people to discover your dogs. Register your interest to be one of our first rescue partners and help shape Lupoppy from the start.
-    </p>
-    <form class="rescue-form" name="rescue-signup" method="POST" data-netlify="true" action="/thank-you-rescue.html">
-      <input type="hidden" name="form-name" value="rescue-signup" />
-      <input type="email" name="email" placeholder="Enter your organisation email" required />
-      <button type="submit">Register Interest 🐶</button>
-    </form>
-  </section>
+  <div class="card-section">
+    <section class="rescue-section">
+      <h2 style="color: #3D2F2F;">Are you a rescue organisation?</h2>
+      <p style="max-width: 600px; margin: 0 auto 20px; font-size: 1.1em;">
+        We're building a smarter way for people to discover your dogs. Register your interest to be one of our first rescue partners and help shape Lupoppy from the start.
+      </p>
+      <form class="rescue-form" name="rescue-signup" method="POST" data-netlify="true" action="/thank-you-rescue.html">
+        <input type="hidden" name="form-name" value="rescue-signup" />
+        <input type="email" name="email" placeholder="Enter your organisation email" required />
+        <button type="submit">Register Interest 🐶</button>
+      </form>
+    </section>
+  </div>
 
-  <section class="waitlist-section">
-    <h2>Looking to adopt a dog?</h2>
-    <p style="max-width: 600px; margin: 0 auto 20px; font-size: 1.1em;">
-      We're not live yet, but we're building something special. Join the waitlist and be the first to know when dogs are ready for their forever homes.
-    </p>
-    <form class="waitlist-form" name="waitlist" method="POST" data-netlify="true" action="/thank-you.html">
-      <input type="hidden" name="form-name" value="waitlist" />
-      <input type="email" name="email" placeholder="Enter your email" required />
-      <button type="submit">Join the Waitlist 🐾</button>
-    </form>
-  </section>
+  <div class="card-section">
+    <section class="waitlist-section">
+      <h2>Looking to adopt a dog?</h2>
+      <p style="max-width: 600px; margin: 0 auto 20px; font-size: 1.1em;">
+        We're not live yet, but we're building something special. Join the waitlist and be the first to know when you can see dogs ready for their forever homes.
+      </p>
+      <form class="waitlist-form" name="waitlist" method="POST" data-netlify="true" action="/thank-you.html">
+        <input type="hidden" name="form-name" value="waitlist" />
+        <input type="email" name="email" placeholder="Enter your email" required />
+        <button type="submit">Join the Waitlist 🐾</button>
+      </form>
+    </section>
+  </div>
 
   <section>
     <h2>Why Lupoppy?</h2>
-    <p>We’re building a better way to find dogs to adopt - no more outdated websites or endless searching. Just happy matches, powered by love and tech.</p>
+    <p>We’re building a better way to find dogs to adopt - helping rescue centers to focus on care. Just happy matches, powered by love and tech.</p>
   </section>
+
+  <div class="card-section">
+    <section class="how-section" style="background-color: #EDE7E3;">
+      <h2>Built with Rescues in Mind</h2>
+      <p style="max-width: 600px; margin: 0 auto;">Lupoppy helps you reach the right adopters - faster, easier, and with care.</p>
+      <div class="how-steps">
+        <div class="how-step">
+          <div class="how-icon">🐾</div>
+          <h3>List with Ease</h3>
+          <p>Share your adoptable dogs in minutes - no tech skills needed.</p>
+        </div>
+        <div class="how-step">
+          <div class="how-icon">🤝</div>
+          <h3>Reach the Right People</h3>
+          <p>Adopters see what your dogs need - no more mismatched applications.</p>
+        </div>
+        <div class="how-step">
+          <div class="how-icon">🕓</div>
+          <h3>Save Time</h3>
+          <p>Let us help filter and guide interest so you can focus on care.</p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div class="card-section">
+    <section class="how-section" style="background-color: #293640; color:white;">
+      <h2>A Better Way to Adopt</h2>
+      <p style="max-width: 600px; margin: 0 auto;">Finally, all your favourite rescues - in one place.</p>
+      <div class="how-steps">
+        <div class="how-step">
+          <div class="how-icon">🔍</div>
+          <h3>Search Smart</h3>
+          <p>Filter by breed, size, age, and much more - across many rescues.</p>
+        </div>
+        <div class="how-step">
+          <div class="how-icon">💌</div>
+          <h3>Understand Expectations</h3>
+          <p>Know what each rescue needs from you before applying.</p>
+        </div>
+        <div class="how-step">
+          <div class="how-icon">🏡</div>
+          <h3>Get Matched</h3>
+          <p>We’ll help you find dogs that fit your home and lifestyle best.</p>
+        </div>
+      </div>
+    </section>
+  </div>
 
   <footer>
     &copy; 2025 Lupoppy. All rights reserved.
