@@ -4,6 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Lupoppy – Find Your Forever Friend</title>
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet" />
   <style>
     body {
       margin: 0;
@@ -13,11 +15,12 @@
     }
     header {
       text-align: center;
-      padding: 60px 20px 40px;
+      padding: 60px 20px 10px;
     }
     header img {
       width: 120px;
       margin: 0 auto 20px;
+      padding-bottom: 20px;
       display: block;
     }
     header h1 {
@@ -36,7 +39,7 @@
       align-items: center;
       gap: 12px;
       max-width: 90%;
-      margin: 0 auto;
+      margin: 20px auto 0;
     }
     @media (min-width: 600px) {
       .signup-form {
@@ -50,7 +53,6 @@
       width: 280px;
       border: 1px solid #ccc;
       border-radius: 6px;
-      margin-right: 10px;
     }
     button {
       padding: 12px 20px;
@@ -64,12 +66,11 @@
       max-width: 200px;
       transition: background-color 0.3s ease, transform 0.2s ease;
     }
-
     button:hover {
       background-color: #b94c3c;
       transform: translateY(-2px);
     }
-        section {
+    section {
       padding: 40px 20px;
       max-width: 700px;
       margin: 0 auto;
@@ -77,7 +78,38 @@
     }
     section h2 {
       color: #D6654F;
-      margin-bottom: 10px;
+      margin-bottom: 20px;
+    }
+    .rescue-section {
+      background-color: #EDE7E3;
+      padding: 20px 20px;
+      margin: 20px auto;
+      text-align: center;
+      border-radius: 20px;
+    }
+    .rescue-form {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      align-items: center;
+      max-width: 400px;
+      margin: 0 auto;
+    }
+    .waitlist-section {
+      background-color: #293640;
+      padding: 20px 20px;
+      margin: 20px auto;
+      text-align: center;
+      border-radius: 20px;
+      color: white;
+    }
+    .waitlist-form {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      align-items: center;
+      max-width: 400px;
+      margin: 0 auto;
     }
     footer {
       text-align: center;
@@ -91,17 +123,37 @@
 <body>
   <header>
     <img src="lupoppy-logo.png" alt="Lupoppy Logo" />
-    <h1>Find Your Forever Friend</h1>
-    <p>A warm, modern platform for discovering adoptable dogs from trusted UK rescues — all in one place.</p>
-    <form class = "signup-form" name="waitlist" method="POST" data-netlify="true" action="/thank-you.html">
+    <h1>A Better Way to Meet Your New Best Friend</h1>
+    <p>A warm, modern platform for discovering adoptable dogs from trusted UK rescues - all in one place.</p>
+  </header>
+
+  <section class="rescue-section">
+    <h2 style="color: #3D2F2F; margin-bottom: 20px;">Are you a rescue organisation?</h2>
+    <p style="max-width: 600px; margin: 0 auto 20px; font-size: 1.1em;">
+      We're building a smarter way for people to discover your dogs. Register your interest to be one of our first rescue partners and help shape Lupoppy from the start.
+    </p>
+    <form class="rescue-form" name="rescue-signup" method="POST" data-netlify="true" action="/thank-you-rescue.html">
+      <input type="hidden" name="form-name" value="rescue-signup" />
+      <input type="email" name="email" placeholder="Enter your organisation email" required />
+      <button type="submit">Register Interest 🐶</button>
+    </form>
+  </section>
+
+  <section class="waitlist-section">
+    <h2>Looking to adopt a dog?</h2>
+    <p style="max-width: 600px; margin: 0 auto 20px; font-size: 1.1em;">
+      We're not live yet, but we're building something special. Join the waitlist and be the first to know when dogs are ready for their forever homes.
+    </p>
+    <form class="waitlist-form" name="waitlist" method="POST" data-netlify="true" action="/thank-you.html">
+      <input type="hidden" name="form-name" value="waitlist" />
       <input type="email" name="email" placeholder="Enter your email" required />
       <button type="submit">Join the Waitlist 🐾</button>
     </form>
-  </header>
+  </section>
 
   <section>
     <h2>Why Lupoppy?</h2>
-    <p>Inspired by two real rescues, Luca and Poppy, we’re building a better way to adopt — no more outdated websites or endless searching. Just happy matches, powered by love and tech.</p>
+    <p>We’re building a better way to find dogs to adopt - no more outdated websites or endless searching. Just happy matches, powered by love and tech.</p>
   </section>
 
   <footer>
