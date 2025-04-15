@@ -7,11 +7,20 @@
   <link rel="icon" type="image/png" href="favicon.png" />
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet" />
   <style>
+
+    :root {
+      --color-primary: #F25C4C;
+      --color-accent: #FDEBE6;
+      --color-text: #1F1F1F;
+      --color-bg: #FFFFFF;
+      --color-soft-bg: #FDEBE6;
+    }
+
     body {
       margin: 0;
       font-family: 'Nunito', sans-serif;
-      background-color: #F9F7F4;
-      color: #2e2e2e;
+      background-color: white;
+      color: var(--color-text);
     }
     header {
       text-align: center;
@@ -25,7 +34,7 @@
     }
     header h1 {
       font-size: 2em;
-      color: #D6654F;
+      color: var(--color-primary);
     }
     header p {
       font-size: 1.2em;
@@ -57,13 +66,13 @@
     button {
       padding: 12px 20px;
       font-size: 1em;
-      background-color: #D6654F;
+      background-color: var(--color-primary);
       color: white;
       border: none;
       border-radius: 6px;
       cursor: pointer;
       width: 100%;
-      max-width: 200px;
+      max-width: 220px;
       transition: background-color 0.3s ease, transform 0.2s ease;
     }
     button:hover {
@@ -77,14 +86,14 @@
       text-align: center;
     }
     section h2 {
-      color: #D6654F;
+      color: var(--color-primary);
       margin-bottom: 20px;
     }
     .card-section {
       padding: 0 20px;
     }
     .rescue-section {
-      background-color: rgb(237, 231, 227);
+      background-color: var(--color-accent);
       padding: 20px;
       margin: 20px auto;
       text-align: center;
@@ -159,7 +168,7 @@
 
 .faq-section h2 {
   text-align: center;
-  color: #D6654F;
+  color: var(--color-primary);
 }
 
 .faq-list {
@@ -182,13 +191,32 @@
   color: #5A4F4F;
 }
 
+.social-icons a {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  color: #F25C4C;
+  transition: transform 0.25s ease, color 0.25s ease;
+}
+
+.social-icons a:hover {
+  transform: scale(1.15);
+  color: #b94c3c;
+}
+
+.social-icons svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
   </style>
 </head>
 <body>
   <header>
     <img src="fetchabl-logo.png" alt="Fetchal Logo" />
-    <h1>A Better Way to Meet Your New Best Friend</h1>
-    <p>A warm, modern platform for discovering adoptable dogs from trusted UK rescues - all in one place.</p>
+    <h1>Helping rescue dogs get seen, and adopted.</h1>
+    <p>A modern search platform for discovering adoptable dogs from trusted UK rescues - all in one place.</p>
   </header>
 
   <div class="card-section">
@@ -200,7 +228,7 @@
       <form class="rescue-form" name="rescue-signup" method="POST" data-netlify="true" action="/thank-you-rescue.html">
         <input type="hidden" name="form-name" value="rescue-signup" />
         <input type="email" name="email" placeholder="Enter your organisation email" required />
-        <button type="submit">Register Interest 🐶</button>
+        <button type="submit">Register Your Interest 🐶</button>
       </form>
     </section>
   </div>
@@ -221,13 +249,17 @@
 
   <section>
     <h2>Why Fetchabl?</h2>
-    <p>We’re building a better way to find dogs to adopt - helping rescue centers to focus on care. Just happy matches, powered by love and tech.</p>
+    <p>We believe every dog deserves a chance to be seen - and every adopter deserves a better way to find them. 
+      But with over 1,000 rescue organisations in the UK, amazing dogs often go unnoticed, hidden behind outdated 
+      websites and scattered systems. Fetchabl is here to fix that. We're building a clean, modern platform that makes 
+      it easy to discover adoptable dogs, and gives rescue centres the visibility and tools they need to rehome more dogs, 
+      faster. No more chasing down rabbit holes. Just a smarter, friendlier way to adopt.</p>
   </section>
 
   <div class="card-section">
-    <section class="how-section" style="background-color: #EDE7E3;">
-      <h2>Built with Rescues in Mind</h2>
-      <p style="max-width: 600px; margin: 0 auto;">Fetchabl helps rescue organisations reach the right adopters - faster, easier, and with care.</p>
+    <section class="how-section" style="background-color: var(--color-soft-bg);">
+      <h2 style="color:var(--color-text)">Built with Rescues in Mind</h2>
+      <p style="max-width: 600px; margin: 0 auto;">Fetchabl helps rescue organisations reach the right adopters - faster and easier with a simple listing process.</p>
       <div class="how-steps">
         <div class="how-step">
           <div class="how-icon">🐾</div>
@@ -288,12 +320,57 @@
           <h3>How do I get listed as a rescue organisation?</h3>
           <p>Just register your interest above - we’ll be in touch with next steps soon!</p>
         </div>
+        <div class="faq-item">
+          <h3>Will it cost anything for rescues to join Fetchabl?</h3>
+          <p>Nope! Fetchabl is free for both rescue organisations and adopters - now and during our early launch phase. We're focused on helping you reach more adopters, save time, and get more dogs into the right homes. As we grow, we may introduce optional premium features, but core access to the platform will always remain free for rescues.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Who can list dogs on Fetchabl?</h3>
+          <p>Only verified UK-based rescue organisations. We’re focused on supporting ethical rehoming from trusted partners.</p>
+        </div>
+        <div class="faq-item">
+          <h3>How do we list our dogs?</h3>
+          <p>We’re building a simple, no-fuss dashboard for rescues. For now, just register your interest - we’ll guide you through it when we launch.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Can I update or remove listings myself?</h3>
+          <p>Yes! You’ll be able to manage your listings anytime. Our tools are designed to make updates quick and easy.</p>
+        </div>
+        <div class="faq-item">
+          <h3>How will people contact us about applications?</h3>
+          <p>You’ll control how people get in touch - whether that’s through your own website, email, or phone. Each rescue will also have a profile page with all your relevant contact details.</p>
+        </div>
       </div>
     </section>
   </div>
 
-  <footer>
-    &copy; 2025 Fetchabl. All rights reserved.
+  <footer style="background-color: #FAFAFA; padding: 40px 20px; text-align: center;">
+    <!-- Wordmark Logo -->
+    <img src="fetchabl-wordmark.png" alt="Fetchabl Wordmark Logo" style="height: 40px; margin-bottom: 20px;" />
+  
+    <!-- Social Icons Container -->
+    <div class="social-icons" style="margin-bottom: 20px; display: flex; justify-content: center; gap: 20px; color: #F25C4C;">
+      
+      <!-- Instagram Icon -->
+      <a href="https://www.instagram.com/fetchabl" target="_blank" aria-label="Instagram" style="display: inline-block; width: 32px; height: 32px;">
+        <!-- 🔻 Paste your Instagram SVG code here -->
+          <svg width="100%" height="100%" viewBox="0 0 221 221" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;"><path d="M28.193,66.711c0.431,-9.411 1.904,-15.48 3.897,-20.632l0.027,-0.071c1.974,-5.243 5.068,-9.992 9.065,-13.918l0.111,-0.111c3.929,-4.002 8.68,-7.093 13.918,-9.062l0.09,-0.035c5.14,-1.999 11.198,-3.467 20.617,-3.897m-47.725,47.726c-0.453,10.055 -0.568,13.172 -0.568,39.243c-0,26.076 0.109,29.186 0.568,39.243m-0,-78.486l-0,2.536m3.932,96.658c1.969,5.237 5.06,9.988 9.062,13.917l0.111,0.111c3.926,3.997 8.675,7.091 13.918,9.065l0.078,0.03c5.145,1.995 11.206,3.464 20.624,3.895m-43.793,-27.018l-0.035,-0.091c-1.999,-5.141 -3.467,-11.198 -3.897,-20.617m3.932,20.708l-0.118,-0.623m-3.814,-20.085l0.154,0.812m-0.154,-0.812l-0,-2.542m3.814,22.627l-3.66,-19.273m3.66,19.273c-1.555,-4.106 -3.155,-9.836 -3.66,-19.273m3.66,19.273c0.054,0.145 0.109,0.287 0.163,0.427c1.971,5.314 5.095,10.126 9.146,14.089c3.962,4.051 8.772,7.174 14.085,9.145c4.263,1.66 10.27,3.396 20.515,3.866c10.339,0.47 13.534,0.566 39.245,0.566c25.713,-0 28.91,-0.096 39.249,-0.566c10.257,-0.471 16.257,-2.216 20.506,-3.863c5.315,-1.971 10.128,-5.095 14.091,-9.148c4.05,-3.962 7.173,-8.772 9.144,-14.084c1.661,-4.263 3.396,-10.27 3.865,-20.515c0.471,-10.339 0.567,-13.54 0.567,-39.245c0,-25.706 -0.096,-28.909 -0.567,-39.248c-0.472,-10.312 -2.233,-16.321 -3.889,-20.573c-2.164,-5.587 -4.908,-9.812 -9.126,-14.03c-4.21,-4.202 -8.424,-6.948 -14.015,-9.114c-4.267,-1.668 -10.28,-3.418 -20.576,-3.89c-0.896,-0.041 -1.738,-0.079 -2.545,-0.114m-123.518,127.024c-0.014,-0.266 -0.028,-0.535 -0.04,-0.807c-0.041,-0.896 -0.079,-1.739 -0.114,-2.547m47.725,-123.67c10.057,-0.459 13.173,-0.568 39.243,-0.568c26.071,-0 29.185,0.115 39.24,0.568m-78.483,-0l2.543,-0m75.94,-0l-2.536,-0m2.536,-0c9.412,0.43 15.483,1.904 20.636,3.897l0.071,0.027c5.242,1.974 9.991,5.068 13.917,9.065l0.11,0.11c3.998,3.926 7.091,8.676 9.064,13.92l0.033,0.089c2,5.14 3.468,11.198 3.898,20.617m-123.669,-47.725l73.404,-0m-73.404,-0c8.516,-0.373 13.223,-0.453 36.7,-0.453c23.48,0 28.186,0.08 36.704,0.453m-73.404,-0c-0.809,0.035 -1.651,0.073 -2.547,0.114c-10.258,0.47 -16.258,2.215 -20.507,3.863c-5.335,1.978 -10.164,5.118 -14.136,9.192c-4.179,4.196 -6.914,8.402 -9.074,13.974c-1.668,4.267 -3.418,10.284 -3.89,20.58c-0.041,0.894 -0.079,1.734 -0.114,2.539m173.937,75.95c-0.43,9.418 -1.898,15.479 -3.894,20.624l-0.029,0.078c-1.976,5.243 -5.069,9.992 -9.066,13.918l-0.11,0.111c-3.93,4.002 -8.68,7.092 -13.919,9.062l-0.09,0.035c-5.14,1.999 -11.198,3.467 -20.617,3.898m-126.212,-50.268c-0.373,-8.517 -0.453,-13.225 -0.453,-36.701c0,-23.485 0.08,-28.186 0.453,-36.707m-0,73.408l-0,-73.408m71.4,74.293c4.935,2.045 10.226,3.097 15.568,3.097c10.791,0 21.139,-4.286 28.769,-11.915c7.629,-7.63 11.916,-17.979 11.916,-28.768c-0,-10.79 -4.287,-21.139 -11.916,-28.768c-7.63,-7.63 -17.978,-11.916 -28.769,-11.916c-5.342,-0 -10.633,1.052 -15.568,3.097c-4.937,2.044 -9.421,5.041 -13.199,8.819c-3.778,3.778 -6.775,8.262 -8.819,13.198c-2.045,4.936 -3.097,10.227 -3.097,15.57c-0,5.343 1.052,10.633 3.097,15.568c2.044,4.937 5.041,9.421 8.819,13.2c3.778,3.777 8.262,6.774 13.199,8.818Zm-13.29,-66.445c7.654,-7.654 18.035,-11.954 28.858,-11.954c10.825,0 21.205,4.3 28.859,11.954c7.654,7.654 11.954,18.034 11.954,28.859c-0,10.823 -4.3,21.204 -11.954,28.858c-7.654,7.654 -18.034,11.953 -28.859,11.953c-10.823,0 -21.204,-4.299 -28.858,-11.953c-7.654,-7.654 -11.953,-18.035 -11.953,-28.858c-0,-10.825 4.299,-21.205 11.953,-28.859Zm92.652,-21.456c-0,3.098 -1.231,6.07 -3.421,8.26c-2.191,2.191 -5.162,3.422 -8.26,3.422c-3.099,-0 -6.069,-1.231 -8.26,-3.422c-2.191,-2.19 -3.422,-5.162 -3.422,-8.26c0,-3.098 1.231,-6.069 3.422,-8.259c2.191,-2.191 5.161,-3.422 8.26,-3.422c3.098,0 6.069,1.231 8.26,3.422c2.19,2.19 3.421,5.161 3.421,8.259Z" style="fill:none;fill-rule:nonzero;stroke:#f25c4c;stroke-width:9.21px;"/></svg>
+        <!-- Example: <svg ...>...</svg> -->
+      </a>
+  
+      <!-- TikTok Icon -->
+      <a href="https://www.tiktok.com/@fetchabl" target="_blank" aria-label="TikTok" style="display: inline-block; width: 32px; height: 32px;">
+        <!-- 🔻 Paste your TikTok SVG code here -->
+         <svg width="100%" height="100%" viewBox="0 0 221 221" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;"><path d="M154.9,47.279c-6.751,-7.739 -10.809,-17.83 -10.809,-28.862l-8.459,-0m19.268,28.862c6.152,7.056 14.482,12.187 23.967,14.197c2.948,0.641 6.023,0.983 9.228,0.983l-0,31.642c-16.406,-0 -31.616,-5.259 -44.006,-14.153l0,64.353c0,32.156 -26.147,58.282 -58.232,58.282c-16.791,0 -31.957,-7.184 -42.596,-18.6c-9.698,-10.434 -15.637,-24.374 -15.637,-39.682c0,-31.685 25.378,-57.512 56.823,-58.196m70.453,-38.826c-0.164,-0.107 -0.328,-0.215 -0.491,-0.324m-90.084,112.825c-3.162,-4.361 -5.042,-9.705 -5.042,-15.521c0,-14.666 11.92,-26.597 26.575,-26.597c2.734,0 5.383,0.47 7.861,1.24l-0,-32.326c-2.564,-0.342 -5.17,-0.556 -7.861,-0.556c-0.47,-0 -4.256,0.251 -4.726,0.251m54.455,-67.854l-23.156,-0l-0.042,126.867c-0.513,14.197 -12.22,25.614 -26.532,25.614c-8.887,0 -16.705,-4.404 -21.576,-11.074" style="fill:none;fill-rule:nonzero;stroke:#f25c4c;stroke-width:9.21px;"/></svg>
+        <!-- Example: <svg ...>...</svg> -->
+      </a>
+  
+    </div>
+  
+    <!-- Copyright -->
+    <div style="font-size: 0.85em; color: #6C5F5B;">
+      &copy; 2025 Fetchabl. All rights reserved.
+    </div>
   </footer>
 </body>
 </html>
