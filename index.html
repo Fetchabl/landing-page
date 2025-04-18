@@ -5,13 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Fetchabl – Find Adoptable Dogs Near You</title>
   <link rel="icon" type="image/png" href="favicon.png" />
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
   <style>
 
     :root {
       --color-primary: #FF6E4A ;
       --color-accent: #FFF6E1;
-      --color-text: #1F1F1F;
+      --color-text-light: white;
+      --color-text-dark: #1F1F1F;
       --color-bg: #FFFFFF;
       --color-soft-bg: #FFF6E1;
       --color-dark-bg: #364652;
@@ -21,7 +24,7 @@
       margin: 0;
       font-family: 'Nunito', sans-serif;
       background-color: white;
-      color: var(--color-text);
+      color: var(--color-text-dark);
     }
     header {
       text-align: center;
@@ -35,7 +38,9 @@
     }
     header h1 {
       font-size: 2em;
-      color: var(--color-text);
+      color: var(--color-text-dark);
+      font-family: Poppins;
+      font-weight: 600;
     }
     header p {
       font-size: 1.2em;
@@ -64,6 +69,11 @@
       border: 1px solid #ccc;
       border-radius: 6px;
     }
+
+    .why-section h2 {
+      color:var(--color-text-dark);
+    }
+
     button {
       padding: 12px 20px;
       font-size: 1em;
@@ -87,8 +97,10 @@
       text-align: center;
     }
     section h2 {
-      color: var(--color-primary);
+      color: var(--color-text-light);
       margin-bottom: 20px;
+      font-family: Poppins;
+      font-weight: 600;
     }
     .card-section {
       padding: 0 20px;
@@ -253,7 +265,7 @@
     </section>
   </div>
 
-  <section>
+  <section class="why-section">
     <h2>Why Fetchabl?</h2>
     <p>We believe every dog deserves a chance to be seen - and every adopter deserves a better way to find them. 
       But with over 1,000 rescue organisations in the UK, amazing dogs often go unnoticed, hidden behind outdated 
@@ -369,6 +381,25 @@
         <!-- 🔻 Paste your TikTok SVG code here -->
          <svg width="100%" height="100%" viewBox="0 0 221 221" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;"><path d="M154.9,47.279c-6.751,-7.739 -10.809,-17.83 -10.809,-28.862l-8.459,-0m19.268,28.862c6.152,7.056 14.482,12.187 23.967,14.197c2.948,0.641 6.023,0.983 9.228,0.983l-0,31.642c-16.406,-0 -31.616,-5.259 -44.006,-14.153l0,64.353c0,32.156 -26.147,58.282 -58.232,58.282c-16.791,0 -31.957,-7.184 -42.596,-18.6c-9.698,-10.434 -15.637,-24.374 -15.637,-39.682c0,-31.685 25.378,-57.512 56.823,-58.196m70.453,-38.826c-0.164,-0.107 -0.328,-0.215 -0.491,-0.324m-90.084,112.825c-3.162,-4.361 -5.042,-9.705 -5.042,-15.521c0,-14.666 11.92,-26.597 26.575,-26.597c2.734,0 5.383,0.47 7.861,1.24l-0,-32.326c-2.564,-0.342 -5.17,-0.556 -7.861,-0.556c-0.47,-0 -4.256,0.251 -4.726,0.251m54.455,-67.854l-23.156,-0l-0.042,126.867c-0.513,14.197 -12.22,25.614 -26.532,25.614c-8.887,0 -16.705,-4.404 -21.576,-11.074" style="fill:none;fill-rule:nonzero;stroke:#f25c4c;stroke-width:9.21px;"/></svg>
         <!-- Example: <svg ...>...</svg> -->
+      </a>
+
+      <!-- Facebook Icon -->
+      <a href="https://www.facebook.com/profile.php?id=61575622313417" target="_blank" aria-label="Facebook" style="display: inline-block; width: 32px; height: 32px;">
+        <!-- 🔻 Paste your TikTok SVG code here -->
+        <svg width="100%" height="100%" viewBox="0 0 251 251" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;">
+          <g transform="matrix(1,0,0,1,0,-4321)">
+              <g id="Artboard3" transform="matrix(1,0,0,1,75,587)">
+                  <rect x="-75" y="3734" width="251" height="251" style="fill:none;"/>
+                  <g transform="matrix(0.0753,0,0,0.0753,50.5,3859.5)">
+                      <g transform="matrix(1,0,0,1,-1666.67,-1666.67)">
+                          <g transform="matrix(138.889,0,0,138.889,0,0)">
+                              <path d="M22,12C22,6.477 17.523,2 12,2C6.477,2 2,6.477 2,12C2,16.991 5.657,21.128 10.438,21.879L10.438,14.891L7.898,14.891L7.898,12L10.438,12L10.438,9.797C10.438,7.291 11.93,5.906 14.215,5.906C15.309,5.906 16.453,6.102 16.453,6.102L16.453,8.562L15.192,8.562C13.95,8.562 13.563,9.333 13.563,10.124L13.563,12L16.336,12L15.893,14.891L13.563,14.891L13.563,21.879C18.343,21.128 22,16.991 22,12Z" style="fill:none;fill-rule:nonzero;stroke:rgb(242,92,76);stroke-width:1px;"/>
+                          </g>
+                      </g>
+                  </g>
+              </g>
+          </g>
+      </svg>
       </a>
   
     </div>
