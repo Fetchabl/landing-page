@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <!-- Google tag (gtag.js) -->
+ <script async src="https://www.googletagmanager.com/gtag/js?id=G-FYS9CYT3HG"></script>
+ <script>
+   window.dataLayer = window.dataLayer || [];
+   function gtag(){dataLayer.push(arguments);}
+   gtag('js', new Date());
+ 
+   gtag('config', 'G-FYS9CYT3HG');
+ </script>
+ 
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
+ <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js"></script>
+ <!-- Cookies Popup Policy -->
+ <script>
+   window.addEventListener("load", function(){
+     window.cookieconsent.initialise({
+       palette: {
+         popup: { background: "#2e2e2e" },
+         button: { background: "#ffd275", text: "#000000" }
+       },
+       theme: "classic",
+       position: "bottom-right",
+       type: "opt-in",
+       content: {
+         message: "We use cookies to improve your experience and to analyze site traffic.",
+         dismiss: "Decline",
+         allow: "Accept",
+         link: "Learn more",
+         href: "privacy-policy.html"
+       },
+       onInitialise: function (status) {
+         var type = this.options.type;
+         var didConsent = this.hasConsented();
+         if (didConsent) {
+           // enable Google Analytics
+           gtag('consent', 'update', {
+             'analytics_storage': 'granted'
+           });
+         } else {
+           // disable GA
+           gtag('consent', 'update', {
+             'analytics_storage': 'denied'
+           });
+         }
+       },
+     })
+   });
+   </script>
+
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy | Fetchabl</title>
+  <link rel="icon" type="image/png" href="favicon.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --color-primary: #FF6E4A;
+      --color-accent: #FEEDD2;
+      --color-text-light: white;
+      --color-text-dark: #1F1F1F;
+      --color-bg: #FFFFFF;
+      --color-soft-bg: #FEEDD2;
+      --color-dark-bg: #364652;
+    }
+
+    body {
+      font-family: 'Nunito', sans-serif;
+      background-color: var(--color-bg);
+      color: var(--color-text-dark);
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+
+    header {
+      text-align: center;
+      padding: 60px 20px 20px;
+    }
+
+    header img {
+      width: 120px;
+      margin-bottom: 20px;
+    }
+
+    header h1 {
+      font-size: 2em;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+    }
+
+    .content {
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .content h2 {
+      color: #1e1e1e;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .content a {
+      color: #0077cc;
+      text-decoration: underline;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    footer {
+      background-color: #FAFAFA;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    footer img {
+      height: 40px;
+      margin-bottom: 20px;
+    }
+
+    .social-icons {
+      margin-bottom: 20px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .social-icons a {
+      display: inline-block;
+      width: 32px;
+      height: 32px;
+      color: #F25C4C;
+      transition: transform 0.25s ease, color 0.25s ease;
+    }
+
+    .social-icons a:hover {
+      transform: scale(1.15);
+      color: #b94c3c;
+    }
+
+    .social-icons svg {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+
+    .legal-link {
+      font-size: 0.85em;
+      color: #6C5F5B;
+      text-decoration: underline;
+    }
+
+    .return {
+  display: inline-block;
+  margin: 30px auto;
+  text-decoration: none;
+  color: white;
+  background-color: var(--color-primary);
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-size: 1em;
+  max-width: 200px;
+  text-align: center;
+}
+    .return:hover {
+      background-color: #b94c3c;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <a href="index.html">
+        <img src="fetchabl-logo.png" alt="Fetchabl Logo" />
+      </a>
+    <h1>Privacy Policy</h1>
+  </header>
+
+  <!-- Main Content -->
+  <div class="content">
+    <p><strong>Last updated:</strong> April 2025</p>
+
+    <p>At Fetchabl, we take your privacy seriously. This Privacy Policy explains how we collect, use, and protect your information when you use our website (<a href="https://www.fetchabl.com">fetchabl.com</a>).</p>
+
+    <h2>1. Who We Are</h2>
+    <p>Fetchabl is a UK-based platform helping people discover rescue dogs from local shelters. For any privacy-related questions, contact us at <a href="mailto:hello@fetchabl.com">hello@fetchabl.com</a>.</p>
+
+    <h2>2. What Information We Collect</h2>
+    <ul>
+      <li><strong>Analytics Data:</strong> We use Google Analytics to understand how users interact with our site. This includes anonymised data like pages visited, time on site, and browser type.</li>
+      <li><strong>Email Signups:</strong> If you subscribe to our waitlist or newsletter, we collect your email address.</li>
+    </ul>
+
+    <h2>3. How We Use Your Information</h2>
+    <ul>
+      <li>To improve website performance and user experience</li>
+      <li>To send occasional updates (if you've subscribed)</li>
+      <li>To understand usage trends and improve features</li>
+    </ul>
+    <p>We <strong>do not sell</strong> your personal information.</p>
+
+    <h2>4. Cookies and Tracking</h2>
+    <p>We use cookies for analytics purposes via Google Analytics. You will be asked for your consent before any non-essential cookies are used. For details, see our Cookie Policy.</p>
+
+    <h2>5. Your Rights</h2>
+    <p>You have the right to:</p>
+    <ul>
+      <li>Access your personal data</li>
+      <li>Request corrections or deletions</li>
+      <li>Withdraw consent at any time</li>
+    </ul>
+    <p>To exercise these rights, email us at <a href="mailto:hello@fetchabl.com">hello@fetchabl.com</a>.</p>
+
+    <h2>6. Changes to This Policy</h2>
+    <p>We may update this policy occasionally. The latest version will always be posted here.</p>
+
+    <h2>7. Contact</h2>
+    <p>For privacy questions, reach out at <a href="mailto:hello@fetchabl.com">hello@fetchabl.com</a>.</p>
+  </div>
+
+  <div style="text-align: center;">
+    <a href="index.html" class="return">Return to Homepage</a>
+  </div>
+
+  <footer style="background-color: #FAFAFA; padding: 40px 20px; text-align: center;">
+    <!-- Wordmark Logo -->
+    <img src="fetchabl-wordmark.png" alt="Fetchabl Wordmark Logo" style="height: 40px; margin-bottom: 20px;" />
+  
+    <!-- Social Icons Container -->
+    <div class="social-icons" style="margin-bottom: 20px; display: flex; justify-content: center; gap: 20px; color: #F25C4C;">
+      
+      <!-- Instagram Icon -->
+      <a href="https://www.instagram.com/fetchabl" target="_blank" aria-label="Instagram" style="display: inline-block; width: 32px; height: 32px;">
+        <!-- 🔻 Paste your Instagram SVG code here -->
+          <svg width="100%" height="100%" viewBox="0 0 221 221" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;"><path d="M28.193,66.711c0.431,-9.411 1.904,-15.48 3.897,-20.632l0.027,-0.071c1.974,-5.243 5.068,-9.992 9.065,-13.918l0.111,-0.111c3.929,-4.002 8.68,-7.093 13.918,-9.062l0.09,-0.035c5.14,-1.999 11.198,-3.467 20.617,-3.897m-47.725,47.726c-0.453,10.055 -0.568,13.172 -0.568,39.243c-0,26.076 0.109,29.186 0.568,39.243m-0,-78.486l-0,2.536m3.932,96.658c1.969,5.237 5.06,9.988 9.062,13.917l0.111,0.111c3.926,3.997 8.675,7.091 13.918,9.065l0.078,0.03c5.145,1.995 11.206,3.464 20.624,3.895m-43.793,-27.018l-0.035,-0.091c-1.999,-5.141 -3.467,-11.198 -3.897,-20.617m3.932,20.708l-0.118,-0.623m-3.814,-20.085l0.154,0.812m-0.154,-0.812l-0,-2.542m3.814,22.627l-3.66,-19.273m3.66,19.273c-1.555,-4.106 -3.155,-9.836 -3.66,-19.273m3.66,19.273c0.054,0.145 0.109,0.287 0.163,0.427c1.971,5.314 5.095,10.126 9.146,14.089c3.962,4.051 8.772,7.174 14.085,9.145c4.263,1.66 10.27,3.396 20.515,3.866c10.339,0.47 13.534,0.566 39.245,0.566c25.713,-0 28.91,-0.096 39.249,-0.566c10.257,-0.471 16.257,-2.216 20.506,-3.863c5.315,-1.971 10.128,-5.095 14.091,-9.148c4.05,-3.962 7.173,-8.772 9.144,-14.084c1.661,-4.263 3.396,-10.27 3.865,-20.515c0.471,-10.339 0.567,-13.54 0.567,-39.245c0,-25.706 -0.096,-28.909 -0.567,-39.248c-0.472,-10.312 -2.233,-16.321 -3.889,-20.573c-2.164,-5.587 -4.908,-9.812 -9.126,-14.03c-4.21,-4.202 -8.424,-6.948 -14.015,-9.114c-4.267,-1.668 -10.28,-3.418 -20.576,-3.89c-0.896,-0.041 -1.738,-0.079 -2.545,-0.114m-123.518,127.024c-0.014,-0.266 -0.028,-0.535 -0.04,-0.807c-0.041,-0.896 -0.079,-1.739 -0.114,-2.547m47.725,-123.67c10.057,-0.459 13.173,-0.568 39.243,-0.568c26.071,-0 29.185,0.115 39.24,0.568m-78.483,-0l2.543,-0m75.94,-0l-2.536,-0m2.536,-0c9.412,0.43 15.483,1.904 20.636,3.897l0.071,0.027c5.242,1.974 9.991,5.068 13.917,9.065l0.11,0.11c3.998,3.926 7.091,8.676 9.064,13.92l0.033,0.089c2,5.14 3.468,11.198 3.898,20.617m-123.669,-47.725l73.404,-0m-73.404,-0c8.516,-0.373 13.223,-0.453 36.7,-0.453c23.48,0 28.186,0.08 36.704,0.453m-73.404,-0c-0.809,0.035 -1.651,0.073 -2.547,0.114c-10.258,0.47 -16.258,2.215 -20.507,3.863c-5.335,1.978 -10.164,5.118 -14.136,9.192c-4.179,4.196 -6.914,8.402 -9.074,13.974c-1.668,4.267 -3.418,10.284 -3.89,20.58c-0.041,0.894 -0.079,1.734 -0.114,2.539m173.937,75.95c-0.43,9.418 -1.898,15.479 -3.894,20.624l-0.029,0.078c-1.976,5.243 -5.069,9.992 -9.066,13.918l-0.11,0.111c-3.93,4.002 -8.68,7.092 -13.919,9.062l-0.09,0.035c-5.14,1.999 -11.198,3.467 -20.617,3.898m-126.212,-50.268c-0.373,-8.517 -0.453,-13.225 -0.453,-36.701c0,-23.485 0.08,-28.186 0.453,-36.707m-0,73.408l-0,-73.408m71.4,74.293c4.935,2.045 10.226,3.097 15.568,3.097c10.791,0 21.139,-4.286 28.769,-11.915c7.629,-7.63 11.916,-17.979 11.916,-28.768c-0,-10.79 -4.287,-21.139 -11.916,-28.768c-7.63,-7.63 -17.978,-11.916 -28.769,-11.916c-5.342,-0 -10.633,1.052 -15.568,3.097c-4.937,2.044 -9.421,5.041 -13.199,8.819c-3.778,3.778 -6.775,8.262 -8.819,13.198c-2.045,4.936 -3.097,10.227 -3.097,15.57c-0,5.343 1.052,10.633 3.097,15.568c2.044,4.937 5.041,9.421 8.819,13.2c3.778,3.777 8.262,6.774 13.199,8.818Zm-13.29,-66.445c7.654,-7.654 18.035,-11.954 28.858,-11.954c10.825,0 21.205,4.3 28.859,11.954c7.654,7.654 11.954,18.034 11.954,28.859c-0,10.823 -4.3,21.204 -11.954,28.858c-7.654,7.654 -18.034,11.953 -28.859,11.953c-10.823,0 -21.204,-4.299 -28.858,-11.953c-7.654,-7.654 -11.953,-18.035 -11.953,-28.858c-0,-10.825 4.299,-21.205 11.953,-28.859Zm92.652,-21.456c-0,3.098 -1.231,6.07 -3.421,8.26c-2.191,2.191 -5.162,3.422 -8.26,3.422c-3.099,-0 -6.069,-1.231 -8.26,-3.422c-2.191,-2.19 -3.422,-5.162 -3.422,-8.26c0,-3.098 1.231,-6.069 3.422,-8.259c2.191,-2.191 5.161,-3.422 8.26,-3.422c3.098,0 6.069,1.231 8.26,3.422c2.19,2.19 3.421,5.161 3.421,8.259Z" style="fill:none;fill-rule:nonzero;stroke:#f25c4c;stroke-width:9.21px;"/></svg>
+        <!-- Example: <svg ...>...</svg> -->
+      </a>
+  
+      <!-- TikTok Icon -->
+      <a href="https://www.tiktok.com/@fetchabl" target="_blank" aria-label="TikTok" style="display: inline-block; width: 32px; height: 32px;">
+        <!-- 🔻 Paste your TikTok SVG code here -->
+         <svg width="100%" height="100%" viewBox="0 0 221 221" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;"><path d="M154.9,47.279c-6.751,-7.739 -10.809,-17.83 -10.809,-28.862l-8.459,-0m19.268,28.862c6.152,7.056 14.482,12.187 23.967,14.197c2.948,0.641 6.023,0.983 9.228,0.983l-0,31.642c-16.406,-0 -31.616,-5.259 -44.006,-14.153l0,64.353c0,32.156 -26.147,58.282 -58.232,58.282c-16.791,0 -31.957,-7.184 -42.596,-18.6c-9.698,-10.434 -15.637,-24.374 -15.637,-39.682c0,-31.685 25.378,-57.512 56.823,-58.196m70.453,-38.826c-0.164,-0.107 -0.328,-0.215 -0.491,-0.324m-90.084,112.825c-3.162,-4.361 -5.042,-9.705 -5.042,-15.521c0,-14.666 11.92,-26.597 26.575,-26.597c2.734,0 5.383,0.47 7.861,1.24l-0,-32.326c-2.564,-0.342 -5.17,-0.556 -7.861,-0.556c-0.47,-0 -4.256,0.251 -4.726,0.251m54.455,-67.854l-23.156,-0l-0.042,126.867c-0.513,14.197 -12.22,25.614 -26.532,25.614c-8.887,0 -16.705,-4.404 -21.576,-11.074" style="fill:none;fill-rule:nonzero;stroke:#f25c4c;stroke-width:9.21px;"/></svg>
+        <!-- Example: <svg ...>...</svg> -->
+      </a>
+
+      <!-- Facebook Icon -->
+      <a href="https://www.facebook.com/profile.php?id=61575622313417" target="_blank" aria-label="Facebook" style="display: inline-block; width: 32px; height: 32px;">
+        <!-- 🔻 Paste your TikTok SVG code here -->
+        <svg width="100%" height="100%" viewBox="0 0 251 251" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;">
+          <g transform="matrix(1,0,0,1,0,-4321)">
+              <g id="Artboard3" transform="matrix(1,0,0,1,75,587)">
+                  <rect x="-75" y="3734" width="251" height="251" style="fill:none;"/>
+                  <g transform="matrix(0.0753,0,0,0.0753,50.5,3859.5)">
+                      <g transform="matrix(1,0,0,1,-1666.67,-1666.67)">
+                          <g transform="matrix(138.889,0,0,138.889,0,0)">
+                              <path d="M22,12C22,6.477 17.523,2 12,2C6.477,2 2,6.477 2,12C2,16.991 5.657,21.128 10.438,21.879L10.438,14.891L7.898,14.891L7.898,12L10.438,12L10.438,9.797C10.438,7.291 11.93,5.906 14.215,5.906C15.309,5.906 16.453,6.102 16.453,6.102L16.453,8.562L15.192,8.562C13.95,8.562 13.563,9.333 13.563,10.124L13.563,12L16.336,12L15.893,14.891L13.563,14.891L13.563,21.879C18.343,21.128 22,16.991 22,12Z" style="fill:none;fill-rule:nonzero;stroke:rgb(242,92,76);stroke-width:1px;"/>
+                          </g>
+                      </g>
+                  </g>
+              </g>
+          </g>
+      </svg>
+      </a>
+  
+    </div>
+  
+    <!-- Copyright -->
+    <div style="font-size: 0.85em; color: #6C5F5B;">
+      &copy; 2025 Fetchabl. All rights reserved.
+    </div>
+  </footer>
+</body>
+</html>
