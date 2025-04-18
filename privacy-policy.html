@@ -1,20 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
- <!-- Google tag (gtag.js) -->
- <script async src="https://www.googletagmanager.com/gtag/js?id=G-FYS9CYT3HG"></script>
- <script>
-   window.dataLayer = window.dataLayer || [];
-   function gtag(){dataLayer.push(arguments);}
-   gtag('js', new Date());
- 
-   gtag('config', 'G-FYS9CYT3HG');
- </script>
- 
+ <!-- Cookie Consent CSS and JS -->
  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
  <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js"></script>
- <!-- Cookies Popup Policy -->
+
+ <!-- Function to load Google Analytics dynamically -->
  <script>
+   function loadGoogleAnalytics() {
+     const script = document.createElement('script');
+     script.src = 'https://www.googletagmanager.com/gtag/js?id=G-FYS9CYT3HG';
+     script.async = true;
+     document.head.appendChild(script);
+
+     window.dataLayer = window.dataLayer || [];
+     function gtag() { dataLayer.push(arguments); }
+     window.gtag = gtag;
+
+     gtag('js', new Date());
+     gtag('config', 'G-FYS9CYT3HG');
+   }
+
    window.addEventListener("load", function(){
      window.cookieconsent.initialise({
        palette: {
@@ -32,23 +38,18 @@
          href: "privacy-policy.html"
        },
        onInitialise: function (status) {
-         var type = this.options.type;
          var didConsent = this.hasConsented();
          if (didConsent) {
-           // enable Google Analytics
-           gtag('consent', 'update', {
-             'analytics_storage': 'granted'
-           });
+           // Update GA consent and load the script
+           window.gtag && gtag('consent', 'update', { 'analytics_storage': 'granted' });
+           loadGoogleAnalytics();
          } else {
-           // disable GA
-           gtag('consent', 'update', {
-             'analytics_storage': 'denied'
-           });
+           window.gtag && gtag('consent', 'update', { 'analytics_storage': 'denied' });
          }
-       },
-     })
+       }
+     });
    });
-   </script>
+ </script>
 
 
   <meta charset="UTF-8" />
