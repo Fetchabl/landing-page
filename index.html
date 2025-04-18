@@ -1,55 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-FYS9CYT3HG"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-FYS9CYT3HG');
-</script>
+ <!-- Cookie Consent CSS and JS -->
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
+ <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js"></script>
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
-<script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js"></script>
-<!-- Cookies Popup Policy -->
-<script>
-  window.addEventListener("load", function(){
-    window.cookieconsent.initialise({
-      palette: {
-        popup: { background: "#2e2e2e" },
-        button: { background: "#ffd275", text: "#000000" }
-      },
-      theme: "classic",
-      position: "bottom-right",
-      type: "opt-in",
-      content: {
-        message: "We use cookies to improve your experience and to analyze site traffic.",
-        dismiss: "Decline",
-        allow: "Accept",
-        link: "Learn more",
-        href: "privacy-policy.html"
-      },
-      onInitialise: function (status) {
-        var type = this.options.type;
-        var didConsent = this.hasConsented();
-        if (didConsent) {
-          // enable Google Analytics
-          gtag('consent', 'update', {
-            'analytics_storage': 'granted'
-          });
-        } else {
-          // disable GA
-          gtag('consent', 'update', {
-            'analytics_storage': 'denied'
-          });
-        }
-      },
-    })
-  });
-  </script>
+ <!-- Function to load Google Analytics dynamically -->
+ <script>
+   function loadGoogleAnalytics() {
+     const script = document.createElement('script');
+     script.src = 'https://www.googletagmanager.com/gtag/js?id=G-FYS9CYT3HG';
+     script.async = true;
+     document.head.appendChild(script);
 
+     window.dataLayer = window.dataLayer || [];
+     function gtag() { dataLayer.push(arguments); }
+     window.gtag = gtag;
+
+     gtag('js', new Date());
+     gtag('config', 'G-FYS9CYT3HG');
+   }
+
+   window.addEventListener("load", function(){
+     window.cookieconsent.initialise({
+       palette: {
+         popup: { background: "#2e2e2e" },
+         button: { background: "#ffd275", text: "#000000" }
+       },
+       theme: "classic",
+       position: "bottom-right",
+       type: "opt-in",
+       content: {
+         message: "We use cookies to improve your experience and to analyze site traffic.",
+         dismiss: "Decline",
+         allow: "Accept",
+         link: "Learn more",
+         href: "privacy-policy.html"
+       },
+       onInitialise: function (status) {
+         var didConsent = this.hasConsented();
+         if (didConsent) {
+           // Update GA consent and load the script
+           window.gtag && gtag('consent', 'update', { 'analytics_storage': 'granted' });
+           loadGoogleAnalytics();
+         } else {
+           window.gtag && gtag('consent', 'update', { 'analytics_storage': 'denied' });
+         }
+       }
+     });
+   });
+ </script>
 
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -60,6 +61,12 @@
   <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
  
 
+    <!-- Optional: Add meta description + og tags for SEO -->
+    <meta name="description" content="Fetchabl is a modern search platform helping you discover adoptable dogs from trusted UK rescues – all in one place." />
+    <meta property="og:title" content="Fetchabl – Find Adoptable Dogs Near You" />
+    <meta property="og:description" content="Helping rescue dogs get seen and adopted. Join our waitlist or register your rescue organisation today." />
+    <meta property="og:image" content="https://fetchabl.com/fetchabl-og.png" />
+    <meta property="og:url" content="https://fetchabl.com/" />
 
 
   <style>
